@@ -1,0 +1,65 @@
+@mixin min-max($min-width, $max-width, $padding){
+  min-width:$min-width;
+  max-width:$max-width;
+  padding:0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin main-btn() {
+  display: inline-block;
+  margin: 0 auto;
+  color: var(--white);
+  border: 2px solid var(--background);
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  background-color: transparent;
+  z-index: 2;
+      &::before{
+          content: '';
+          z-index: -1;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 3px;
+          width: 60%;
+          background: var(--main-color);
+          transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+      }  
+      &:hover{
+          background-color: transparent;
+          &::before{
+              z-index: -1;
+              left: 0;
+              right: auto;
+              width: 100%;
+          }    
+      }
+}
+
+
+@mixin points-scenery(){
+  display: flex;
+  justify-content: center;
+      span{
+          width: 10px;
+          margin-right: 29.93px;
+          height: 10px;
+          background: #DB3138;
+          transform: rotate(-45deg);
+              &:last-child{
+                  margin-right: 0;
+              }
+      }
+}
+
+@mixin border-stroke(){
+  border: 1px solid rgba($color: #fff, $alpha: 0.5);
+}

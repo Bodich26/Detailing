@@ -1,0 +1,188 @@
+@import 'mixins';
+
+.main {
+  background: url('../images/Home.jpg') center / cover;
+  height: 100%;
+  &__block {
+    text-align: center;
+    padding: 237px 285px 113px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 110px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 125%;
+    color: var(--main-color);
+    &-two {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 110px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 125%;
+      color: var(--main-color);
+      font-size: 64px;
+    }
+  }
+
+  &__decor {
+    // - Миксин с Декоративными Поинтами -//
+    @include points-scenery();
+    margin: 40px 0;
+  }
+
+  &__desc {
+    max-width: 550px;
+    font-size: 30px;
+    line-height: 135%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    @include main-btn();
+  }
+
+  &__contact {
+    text-transform: uppercase;
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      color: var(--main-color);
+    }
+    &-box {
+      flex-basis: 33.33%;
+      padding: 39px 15px;
+      word-wrap: break-word;
+      @include border-stroke();
+      &:first-child {
+        border-style: solid none;
+      }
+      &:last-child {
+        border-style: solid none;
+      }
+    }
+    &-title {
+      color: var(--white);
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    &-text {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto;
+      a {
+        color: var(--main-color);
+      }
+      address {
+        font-style: normal;
+      }
+    }
+  }
+}
+
+//------------------------------------------------------>
+
+@media (max-width: 992px) {
+  .main__contact-text {
+    font-size: 21px;
+    line-height: 160%;
+  }
+
+  .main__block {
+    padding: 237px 0px 113px;
+  }
+
+  .main__title {
+    font-size: 92px;
+    line-height: 107%;
+  }
+
+  .main__desc {
+    font-size: 26px;
+    line-height: 120%;
+  }
+
+  .main__contact-text {
+    font-size: 21px;
+    line-height: 160%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__contact-title {
+    font-size: 16px;
+  }
+
+  .main__title-two {
+    font-size: 42px;
+  }
+
+  .main__desc {
+    font-size: 26px;
+    line-height: 120%;
+  }
+
+  .main__contact-text {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .main__contact-block {
+    display: block;
+  }
+
+  .main__contact-box {
+    border-top: 1px solid var(--silver) !important;
+    border-bottom: 1px solid var(--silver) !important;
+    &:nth-child(2) {
+      border: none !important;
+    }
+  }
+
+  .main__contact-text {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .main__title {
+    font-size: 65px;
+  }
+
+  .main__title-two {
+    font-size: 38px;
+  }
+
+  .main__desc {
+    font-size: 19px;
+    line-height: 120%;
+  }
+
+  .main__contact-block {
+    display: block;
+  }
+
+  .main__contact-box {
+    border-top: 1px solid var(--silver) !important;
+    border-bottom: 1px solid var(--silver) !important;
+    &:nth-child(2) {
+      border: none !important;
+    }
+  }
+
+  .main__contact-text {
+    font-size: 17px !important;
+  }
+}

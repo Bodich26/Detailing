@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* Сброс стилей */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: var(--white);
+  background-color: var(--background);
+}
+
+img{
+  height: auto;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+}
+ol, ul{
+  list-style: none;
+}
+button{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: inherit;
+}
+input{
+  outline: none;
+}
+p{
+  font-weight: 500;
+}
+
+

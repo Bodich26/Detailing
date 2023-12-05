@@ -1,0 +1,23 @@
+@import "mixins";
+@import "reset";
+@import "veriable";
+
+
+@import "header";
+@import "main";
+@import "cup";
+@import "slider";
+@import "present";
+@import "services";
+@import "gallery";
+@import "answer";
+
+@import "antigravel";
+@import "table";
+@import "footer";
+
+.container {
+  @include min-max(375px, 1296px, 15px);
+}
+
+
