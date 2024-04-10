@@ -5,7 +5,7 @@
   height: 100%;
   &__block {
     text-align: center;
-    padding: 237px 285px 113px;
+    padding: 237px 90px 113px;
   }
 
   &__title {
@@ -100,7 +100,7 @@
   }
 
   .main__block {
-    padding: 237px 0px 113px;
+    padding: 60px 0px 56px;
   }
 
   .main__title {
@@ -124,6 +124,9 @@
     font-size: 16px;
   }
 
+  .main__title {
+    font-size: 72px;
+  }
   .main__title-two {
     font-size: 42px;
   }
